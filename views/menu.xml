@@ -1,0 +1,16 @@
+<odoo>
+  <data>
+    <!--ACTIONS-->
+    <record model="ir.actions.act_window" id="build_dependency_action">
+      <field name="name">Dependency Info</field>
+      <field name="res_model">basic.dependency</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!--MENU-->
+    <menuitem name="Dependency Tree"
+              action="build_dependency_action"
+              parent="base.menu_custom"/>
+
+  </data>
+</odoo>

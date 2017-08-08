@@ -1,0 +1,46 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="dependency_tree.list">
+      <field name="name">dependency_tree.list</field>
+      <field name="model">basic.dependency</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="create_date"/>
+          <field name="root_id"/>
+          <field name="depth"/>
+          <field name="dependency_count"/>
+          <!--<field name="distinct_ids"/>-->
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="dependency_tree.form">
+      <field name="name">dependency_tree.form</field>
+      <field name="model">basic.dependency</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <group>
+                <field name="create_date" readonly="1"/>
+                <field name="root_id"/>
+              </group>
+              <group>
+                <field name="depth"/>
+                <field name="dependency_count"/>
+              </group>
+            </group>
+            <notebook>
+              <page string="Distinct Dependencies">
+                <field name="distinct_ids"/>
+              </page>
+              <page string="Visualization">
+                <field name="dependency_tree"/>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+  </data>
+</odoo>
