@@ -1,4 +1,4 @@
-<odoo>
+<openerp>
   <data>
     <!--ACTIONS-->
     <record model="ir.actions.act_window" id="build_dependency_action">
@@ -13,4 +13,4 @@
               parent="base.menu_custom"/>
 
   </data>
-</odoo>
+</openerp>

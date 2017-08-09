@@ -1,4 +1,4 @@
-<odoo>
+<openerp>
   <data>
     <record model="ir.ui.view" id="dependency_tree.list">
       <field name="name">dependency_tree.list</field>
@@ -43,4 +43,4 @@
       </field>
     </record>
   </data>
-</odoo>
+</openerp>
