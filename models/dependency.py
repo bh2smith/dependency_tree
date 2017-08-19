@@ -23,7 +23,8 @@ class BasicDepends(models.Model):
     name = fields.Char(compute='_get_dependencies')
     root_id = fields.Many2one('ir.module.module', string="Root Module")
     dependency_tree = fields.Text(compute='_get_dependencies', store=True)
-    distinct_ids = fields.Many2many('ir.module.module', compute='_get_dependencies', store=True)
+    distinct_ids = fields.Many2many(
+        'ir.module.module', compute='_get_dependencies', store=True)
 
     dependency_count = fields.Integer(compute='_get_dependencies')
     depth = fields.Integer(compute='_get_dependencies', store=True)
